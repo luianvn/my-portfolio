@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management – Jenny</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        let names = ["andrea", "cielo", "bernalyn", "toni"];
+
+        let employees = [
+            { "emp_id": "123", "names": "Elon Musk", "position": "CEO" },
+            { "emp_id": "143", "names": "Bill Gates", "position": "Supervisor" }
+        ];
+    </script>
+
+    <script src="./js/array.js" defer></script>
+    <script src="./js/object.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Employee Management System</h1>
+
+        <div class="flex-wrapper">
+
+            <!-- NAME LIST SECTION -->
+            <section class="card">
+                <h2>Simple Name List</h2>
+
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="name">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="addName()">Add</button>
+                    <button onclick="showAll()">Show All</button>
+                </div>
+
+                <div class="output-box" id="list"></div>
+            </section>
+
+
+            <!-- EMPLOYEE SECTION -->
+            <section class="card">
+                <h2>Add Employee</h2>
+
+                <div class="form-group">
+                    <label>Employee ID:</label>
+                    <input type="text" id="emp_id">
+                </div>
+
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="names">
+                </div>
+
+                <div class="form-group">
+                    <label>Position:</label>
+                    <input type="text" id="position">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="addEmployee()">Add Employee</button>
+                    <button onclick="showEmployees()">Show Employees</button>
+                </div>
+            </section>
+
+        </div>
+
+
+        <!-- EMPLOYEE TABLE SECTION -->
+        <section class="table-card">
+            <h2>Employee Table</h2>
+
+            <div class="table-responsive">
+                <table id="employee">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- dynamic rows -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

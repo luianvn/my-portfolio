@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenny's Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="./js/numbers.js" defer></script>
+    <script src="./js/operations.js" defer></script>
+</head>
+<body>
+
+    <h1 class="title">Simple Calculator</h1>
+
+    <div class="calc-container">
+
+        <!-- YOUR JS EXPECTS INPUTS, NOT DIVS -->
+        <input type="text" id="display" value="0" class="display" readonly>
+        <input type="hidden" id="display2" value="">
+        <input type="hidden" id="operator" value="">
+
+        <div class="buttons">
+
+            <!-- numbers -->
+            <button onclick="seven()">7</button>
+            <button onclick="eight()">8</button>
+            <button onclick="nine()">9</button>
+            <button class="op" onclick="divide()">÷</button>
+
+            <button onclick="four()">4</button>
+            <button onclick="five()">5</button>
+            <button onclick="six()">6</button>
+            <button class="op" onclick="times()">×</button>
+
+            <button onclick="one()">1</button>
+            <button onclick="two()">2</button>
+            <button onclick="three()">3</button>
+            <button class="op" onclick="minus()">−</button>
+
+            <button onclick="zero()">0</button>
+            <button onclick="decimal()">.</button>
+            <button onclick="equals()">=</button>
+            <button class="op" onclick="plus()">+</button>
+
+        </div>
+    </div>
+
+    <!-- Attach your JS files HERE -->
+    <script src="numbers.js"></script>
+    <script src="operations.js"></script>
+
+</body>
+</html>
